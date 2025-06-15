@@ -70,8 +70,6 @@ CREATE OR REPLACE TABLE dim_track (
 );
 ________________________________________
 🧮 Data Model
-lua
-CopyEdit
               +----------------+
               |  dim_artist    |
               +----------------+
@@ -85,8 +83,7 @@ CopyEdit
                 +-------------+
                 |  dim_user   |
                 +-------------+
-Follows a classic star schema for optimized querying and BI integration.
-________________________________________
+
 📊 Dashboard Walkthrough
 Built using Power BI, the dashboard delivers insights across:
 •	Albums, Artists, and Tracks
@@ -124,11 +121,10 @@ ________________________________________
 o	CLIENT_ID
 o	CLIENT_SECRET
 •	Set environment variables:
-bash
-CopyEdit
 export SPOTIPY_CLIENT_ID='your_id_here'
 export SPOTIPY_CLIENT_SECRET='your_secret_here'
 export SPOTIPY_REDIRECT_URI='http://127.0.0.1:8000/callback'
+
 ________________________________________
 🧪 Running the Pipeline
 bash
