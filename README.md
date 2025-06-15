@@ -16,8 +16,6 @@ ________________________________________
 •	🔎 Granular Metrics: Track plays, skips, engagement windows, and more.
 ________________________________________
 🛠️ System Architecture
-java
-CopyEdit
 Spotify API → AWS S3 → AWS Glue (ETL in Python) → Snowflake → Power BI Dashboards
 •	API Source: Spotify Web API streams track & user interaction data
 •	Staging: Raw JSON data stored temporarily in Amazon S3
@@ -70,6 +68,8 @@ CREATE OR REPLACE TABLE dim_track (
 );
 ________________________________________
 🧮 Data Model
+lua
+CopyEdit
               +----------------+
               |  dim_artist    |
               +----------------+
@@ -83,7 +83,8 @@ ________________________________________
                 +-------------+
                 |  dim_user   |
                 +-------------+
-
+Follows a classic star schema for optimized querying and BI integration.
+________________________________________
 📊 Dashboard Walkthrough
 Built using Power BI, the dashboard delivers insights across:
 •	Albums, Artists, and Tracks
@@ -121,10 +122,11 @@ ________________________________________
 o	CLIENT_ID
 o	CLIENT_SECRET
 •	Set environment variables:
+bash
+CopyEdit
 export SPOTIPY_CLIENT_ID='your_id_here'
 export SPOTIPY_CLIENT_SECRET='your_secret_here'
 export SPOTIPY_REDIRECT_URI='http://127.0.0.1:8000/callback'
-
 ________________________________________
 🧪 Running the Pipeline
 bash
@@ -145,6 +147,15 @@ ________________________________________
 •	Deploy ML models for hit-song prediction
 •	Expand to multi-platform: YouTube, Apple Music
 •	Launch web UI for interactive exploration
+________________________________________
+🤝 Contributions
+We welcome feedback and collaboration! Fork the repo, make your changes in a branch, and open a PR 🚀
+________________________________________
+👨‍👩‍👧‍👦 Team
+•	Shibin Biji Thomas
+•	Jenil Savalia
+•	Vrushabh Bodarya
+•	Sarvesh Waghmare
 ________________________________________
 🙏 Acknowledgements
 •	Spotify Developer API
